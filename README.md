@@ -1,3 +1,4 @@
 - [Lenguaje C](./C_Aprender.md)
 - [Punteros y memoria en C](./punteros_c.md)
-- [SQL](./sql_manual.md) 
+- [SQL](./sql_manual.md)
+- [C++](./cpp_manual.md) 
