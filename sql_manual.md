@@ -268,6 +268,7 @@ WHERE price = 10;
 
 * **Eliminar usando operadores lógicos:**
 Borrar los empleados cuyo salario sea menor a 1500:
+
 ```sql
 DELETE FROM empleados 
 WHERE salario < 1500;
@@ -340,6 +341,7 @@ WHERE condicion;
 ### 2. Ejemplos Prácticos
 
 * **Consultar todas las columnas de una tabla:**
+
 ```sql
 SELECT * FROM empleados;
 
@@ -347,6 +349,7 @@ SELECT * FROM empleados;
 
 
 * **Consultar columnas específicas:**
+
 ```sql
 SELECT first_name, last_name FROM person;
 
@@ -354,6 +357,7 @@ SELECT first_name, last_name FROM person;
 
 
 * **Filtrar datos usando la cláusula `WHERE`:**
+
 ```sql
 SELECT f1, f2 FROM t1 WHERE (f3 < 10) AND (f4 = 'y');
 
@@ -587,6 +591,7 @@ USE nombre_base_de_datos;
 Para recuperar y visualizar los registros almacenados dentro de una tabla, se utiliza la sentencia `SELECT`.
 
 * **Seleccionar todas las columnas y filas de una tabla:**
+
 ```sql
 SELECT * FROM nombre_tabla;
 
@@ -596,6 +601,7 @@ SELECT * FROM nombre_tabla;
 *(El asterisco `*` funciona como una abreviatura para "todas las columnas")*
 
 * **Seleccionar columnas específicas:**
+
 ```sql
 SELECT columna1, columna2 FROM nombre_tabla;
 
@@ -603,6 +609,7 @@ SELECT columna1, columna2 FROM nombre_tabla;
 
 
 * **Seleccionar filas filtrando por una condición (`WHERE`):**
+
 ```sql
 SELECT * FROM nombre_tabla WHERE condicion = valor;
 
@@ -618,6 +625,7 @@ USE nombre_de_la_base;
 
 ### Ejemplo Práctico:
 Si tienes una base de datos llamada `blog`, puedes seleccionarla de la siguiente manera:
+
 ```sql
 USE blog;
 ```
@@ -820,6 +828,7 @@ Para almacenar **cantidades de dinero** en MySQL de forma precisa y evitar los e
 El tipo **`DECIMAL`** (también conocido como `NUMERIC` o `FIXED`) es el estándar de la industria para datos monetarios y financieros, ya que almacena los valores de forma exacta sin perder decimales.
 
 * **Sintaxis:**
+
 ```sql
 DECIMAL(precisión, escala)
 
@@ -948,6 +957,7 @@ WHERE salario > 3000;
 
 
 * **Combinar múltiples condiciones con `AND` y `OR`:**
+
 ```sql
 SELECT nombre, departamento, salario 
 FROM empleados 
@@ -1076,6 +1086,7 @@ ORDER BY expresion1 [ASC | DESC], expresion2 [ASC | DESC];
 ### 2. Ejemplos Prácticos
 
 * **Orden alfabético ascendente:**
+
 ```sql
 SELECT * FROM members ORDER BY name;
 ```
@@ -1089,12 +1100,14 @@ SELECT * FROM seq ORDER BY i DESC;
 
 
 * **Ordenamiento por múltiples columnas:**
+
 ```sql
 SELECT * FROM seq ORDER BY x, i;
 ``` 
 
 
 * **Combinación con `LIMIT` para restringir resultados:**
+
 ```sql
 SELECT * FROM members ORDER BY name LIMIT 2;
 ``` 
@@ -1122,6 +1135,7 @@ Los dos comodines estándar admitidos son:
 
 1. **Buscar registros que comienzan con una letra específica (`%`):**
 Para seleccionar los días que empiezan con la letra "T":
+
 ```sql
 SELECT * FROM t1 WHERE d LIKE "T%";
 ``` 
@@ -1130,6 +1144,7 @@ SELECT * FROM t1 WHERE d LIKE "T%";
 
 2. **Buscar una subcadena en cualquier posición (`%`):**
 Para encontrar registros que contengan las letras "es" en cualquier parte del texto:
+
 ```sql
 SELECT * FROM t1 WHERE d LIKE "%es%";
 ``` 
@@ -1138,6 +1153,7 @@ SELECT * FROM t1 WHERE d LIKE "%es%";
 
 3. **Buscar un número exacto de caracteres desconocido (`_`):**
 Para buscar valores que terminen en "day" y tengan exactamente tres caracteres antes de esa palabra:
+
 ```sql
 SELECT * FROM t1 WHERE d LIKE "___day";
 ``` 
@@ -1377,7 +1393,8 @@ UNION
 Tomando una tabla numérica llamada `seqs`, puedes observar cómo reacciona el operador al duplicar registros:
 
 * **Usando `UNION` (elimina duplicados):**
-  ```sql
+
+   ```sql
   SELECT i FROM seqs WHERE i <= 3 
   UNION 
   SELECT i FROM seqs WHERE i >= 3;
@@ -1385,6 +1402,7 @@ Tomando una tabla numérica llamada `seqs`, puedes observar cómo reacciona el o
   *Este resultado eliminará los valores repetidos que coincidan en ambas condiciones.*
 
 * **Usando `UNION ALL` (conserva duplicados):**
+
   ```sql
   SELECT i FROM seqs WHERE i <= 3 
   UNION ALL 
