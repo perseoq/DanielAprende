@@ -101,16 +101,16 @@ En C, los tipos de datos determinan la **amplitud del rango** que podemos almace
 Los enteros se dividen según su capacidad y si aceptan o no números negativos (firmados vs no firmados). Los valores mostrados a continuación corresponden a arquitecturas estándar de 32 y 64 bits típicas:  
 
 
-|**Tipo de Dato**|**Tamaño en Memoria**|**Rango Mínimo / Máximo (Límites estándar)**|
-| | | |
-|`char` / `signed char`|1 byte (8 bits)|`-127` a `+127` (o `-128` a `127`)|
-|`unsigned char`|1 byte (8 bits)|`0` a `255`|
-|`short` (o `short int`)|2 bytes (16 bits)|`-32,768` a `32,767`|
-|`unsigned short`|2 bytes (16 bits)|`0` a `65,535`|
-|`int`|4 bytes (32 bits)|`-2,147,483,648` a `2,147,483,647`|
-|`unsigned int`|4 bytes (32 bits)|`0` a `4,294,967,295`|
-|`long` (o `long int`)|4 u 8 bytes|Varía según plataforma (mínimo de `-2,147,483,647` a `2,147,483,647`)|
-|`long long`|8 bytes (64 bits)|`-9,223,372,036,854,775,808` a `9,223,372,036,854,775,807`|
+| Tipo de Dato | Tamaño en Memoria | Rango Mínimo / Máximo (Límites estándar) |
+|---|---|---|
+| char / signed char | 1 byte (8 bits) | -127 a +127 (o -128 a 127) |
+| unsigned char | 1 byte (8 bits) | 0 a 255 |
+| short (o short int) | 2 bytes (16 bits) | -32,768 a 32,767 |
+| unsigned short | 2 bytes (16 bits) | 0 a 65,535 |
+| int | 4 bytes (32 bits) | -2,147,483,648 a 2,147,483,647 |
+| unsigned int | 4 bytes (32 bits) | 0 a 4,294,967,295 |
+| long (o long int) | 4 u 8 bytes | Varía según plataforma (mínimo de -2,147,483,647 a 2,147,483,647) |
+| long long | 8 bytes (64 bits) | -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 |
 
 #### Ejemplo de código comentado
 
