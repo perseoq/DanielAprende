@@ -1,171 +1,499 @@
-/* ===== TEMA OSCURO ===== */
+/* ============================================================
+   TEMA OSCURO "DanielAprende"
+   Paleta: GitHub Dark + acentos azul/púrpura
+   ============================================================ */
+
 :root {
-  --bg:        #0d1117;
-  --bg-alt:    #161b22;
-  --bg-code:   #1f242c;
-  --border:    #30363d;
-  --border-soft:#21262d;
-  --text:      #c9d1d9;
-  --text-muted:#8b949e;
-  --text-strong:#f0f6fc;
-  --link:      #58a6ff;
-  --link-hover:#79c0ff;
-  --accent:    #1f6feb;
-  --danger:    #f85149;
-  --success:   #3fb950;
-  --warning:   #d29922;
+  /* Fondos */
+  --bg:            #0d1117;
+  --bg-elev:       #161b22;
+  --bg-elev-2:     #1c2128;
+  --bg-code:       #1f242c;
+  --bg-inline:     rgba(110, 118, 129, 0.25);
+
+  /* Bordes */
+  --border:        #30363d;
+  --border-soft:   #21262d;
+
+  /* Texto */
+  --text:          #c9d1d9;
+  --text-strong:   #f0f6fc;
+  --text-muted:    #8b949e;
+  --text-dim:      #6e7681;
+
+  /* Acentos */
+  --link:          #58a6ff;
+  --link-hover:    #79c0ff;
+  --accent:        #1f6feb;
+  --accent-2:      #8957e5;
+  --accent-3:      #3fb950;
+  --danger:        #f85149;
+  --warning:       #d29922;
+
+  /* Sombras */
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.4);
+  --shadow-md:     0 4px 12px rgba(0,0,0,0.5);
+  --shadow-lg:     0 10px 30px rgba(0,0,0,0.6);
+
+  /* Radios */
+  --radius-sm:     6px;
+  --radius-md:     10px;
+  --radius-lg:     14px;
 }
 
-/* Base */
+/* ============================================================
+   RESET / BASE
+   ============================================================ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               Helvetica, Arial, sans-serif, "Apple Color Emoji",
+               "Segoe UI Emoji";
+  font-size: 16px;
+  line-height: 1.65;
   color: var(--text);
   background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse at top left,  rgba(31,111,235,0.10), transparent 55%),
+    radial-gradient(ellipse at bottom right, rgba(137,87,229,0.10), transparent 55%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a { color: var(--link); }
-a:hover { color: var(--link-hover); text-decoration: underline; }
-
-hr, .rule {
-  border-bottom: 1px solid var(--border);
-  background: transparent;
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 8px;
+  border: 3px solid var(--bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
 }
 
-/* Encabezados */
-h1, h2, h3, h4, h5, h6 { color: var(--text-strong); }
-h1, h2 { border-bottom: 1px solid var(--border); }
-h6 { color: var(--text-muted); }
-
-/* Blockquote */
-blockquote {
-  color: var(--text-muted);
-  border-left: 0.25em solid var(--border);
-}
-
-/* Código */
-code, tt, kbd, pre, samp {
-  color: var(--text);
-  background-color: var(--bg-code);
-}
-pre {
-  background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 16px;
-  overflow: auto;
-}
-pre code {
-  background: transparent;
-  border: 0;
-  padding: 0;
-}
-
-/* Kbd */
-kbd {
-  color: var(--text);
-  background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-bottom-color: #484f58;
-  box-shadow: inset 0 -1px 0 #484f58;
-}
-
-/* Tablas */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-table th,
-table td {
-  padding: 6px 13px;
-  border: 1px solid var(--border);
-}
-table th {
-  font-weight: 600;
-  background-color: var(--bg-alt);
+::selection {
+  background: rgba(88, 166, 255, 0.35);
   color: var(--text-strong);
 }
-table tr {
-  background-color: var(--bg);
-  border-top: 1px solid var(--border);
+
+/* ============================================================
+   CONTENEDOR PRINCIPAL
+   ============================================================ */
+.container-lg {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
 }
-table tr:nth-child(2n) {
-  background-color: var(--bg-alt);
+
+@media (max-width: 640px) {
+  .container-lg {
+    padding: 24px 16px 64px;
+  }
 }
-table img { background-color: transparent; }
 
-/* Imágenes */
-img { background-color: transparent; }
-
-/* Enlaces "muted" */
-.muted-link { color: var(--text-muted); }
-.muted-link:hover { color: var(--link); }
-
-/* Utilidades de texto */
-.text-gray-light { color: var(--text-muted) !important; }
-.text-gray       { color: var(--text-muted) !important; }
-.text-gray-dark  { color: var(--text-strong) !important; }
-.text-blue       { color: var(--link) !important; }
-.text-red        { color: var(--danger) !important; }
-.text-green      { color: var(--success) !important; }
-.text-orange     { color: var(--warning) !important; }
-.text-white      { color: var(--text-strong) !important; }
-
-/* Utilidades de fondo */
-.bg-white       { background-color: var(--bg) !important; }
-.bg-gray        { background-color: var(--bg-alt) !important; }
-.bg-gray-light  { background-color: var(--bg-alt) !important; }
-.bg-gray-dark   { background-color: var(--bg-alt) !important; }
-.bg-blue-light  { background-color: #0d419d !important; }
-.bg-green-light { background-color: #033a16 !important; }
-.bg-red-light   { background-color: #4c1117 !important; }
-.bg-yellow-light{ background-color: #3a2d00 !important; }
-.bg-purple-light{ background-color: #271a4d !important; }
-
-/* Bordes */
-.border,
-.border-top, .border-right, .border-bottom, .border-left {
-  border-color: var(--border) !important;
-}
-.border-gray-light { border-color: var(--border-soft) !important; }
-.border-gray-dark  { border-color: var(--border) !important; }
-.border-black-fade { border-color: rgba(240,246,252,0.15) !important; }
-
-/* Markdown body */
+/* ============================================================
+   MARKDOWN BODY
+   ============================================================ */
 .markdown-body {
   color: var(--text);
-  background-color: var(--bg);
+  font-size: 16px;
+  line-height: 1.7;
+  word-wrap: break-word;
 }
-.markdown-body a { color: var(--link); }
-.markdown-body a:not([href]) { color: inherit; }
-.markdown-body .absent { color: var(--danger); }
-.markdown-body hr { background-color: var(--border); }
-.markdown-body blockquote { color: var(--text-muted); border-left-color: var(--border); }
-.markdown-body table th,
-.markdown-body table td { border: 1px solid var(--border); }
-.markdown-body table tr { background-color: var(--bg); border-top: 1px solid var(--border); }
-.markdown-body table tr:nth-child(2n) { background-color: var(--bg-alt); }
+
+.markdown-body > *:first-child { margin-top: 0 !important; }
+.markdown-body > *:last-child  { margin-bottom: 0 !important; }
+
+/* Encabezados */
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--text-strong);
+  letter-spacing: -0.01em;
+}
+
+.markdown-body h1 {
+  font-size: 2.1em;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(90deg, var(--link), var(--accent-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.markdown-body h2 {
+  font-size: 1.55em;
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-strong);
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+  color: #d2a8ff; /* púrpura suave */
+}
+
+.markdown-body h4 {
+  font-size: 1.05em;
+  color: var(--link);
+}
+
+.markdown-body h5 { font-size: 0.95em; }
+.markdown-body h6 {
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+/* Enlace del título "DanielAprende" */
+.markdown-body h1 > a {
+  text-decoration: none;
+  color: inherit;
+  -webkit-text-fill-color: inherit;
+  background: inherit;
+  -webkit-background-clip: inherit;
+  background-clip: inherit;
+}
+
+/* Párrafos */
+.markdown-body p {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+/* Enlaces */
+.markdown-body a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.15s ease;
+  border-bottom: 1px solid transparent;
+}
+.markdown-body a:hover {
+  color: var(--link-hover);
+  border-bottom-color: var(--link-hover);
+}
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Listas */
+.markdown-body ul,
+.markdown-body ol {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-left: 2em;
+}
+.markdown-body li {
+  margin-bottom: 0.35em;
+}
+.markdown-body li + li {
+  margin-top: 0.25em;
+}
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.markdown-body ul li::marker { color: var(--link); }
+.markdown-body ol li::marker { color: var(--accent-2); font-weight: 600; }
+
+/* Blockquote */
+.markdown-body blockquote {
+  margin: 0 0 16px;
+  padding: 12px 18px;
+  color: var(--text-muted);
+  background: linear-gradient(90deg, rgba(88,166,255,0.08), transparent);
+  border-left: 4px solid var(--link);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.markdown-body blockquote > :first-child { margin-top: 0; }
+.markdown-body blockquote > :last-child  { margin-bottom: 0; }
+.markdown-body blockquote strong {
+  color: var(--text-strong);
+}
+
+/* Regla horizontal */
+.markdown-body hr {
+  height: 1px;
+  margin: 32px 0;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  border: 0;
+}
+
+/* ============================================================
+   CÓDIGO
+   ============================================================ */
+
+/* Código en línea */
 .markdown-body code,
 .markdown-body tt {
-  background-color: rgba(110,118,129,0.4);
-  color: var(--text);
+  padding: 0.2em 0.45em;
+  margin: 0;
+  font-size: 0.88em;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+               Courier, monospace;
+  background: var(--bg-inline);
+  color: #ff7b72;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-soft);
+}
+
+/* Bloque de código */
+.markdown-body pre {
+  position: relative;
+  margin: 0 0 20px;
+  padding: 18px 20px;
+  overflow: auto;
+  font-size: 0.88em;
+  line-height: 1.55;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+               Courier, monospace;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Barra superior decorativa con 3 "luces" estilo mac */
+.markdown-body pre::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 28px;
+  background:
+    radial-gradient(circle at 14px 14px, #ff5f56 5px, transparent 6px),
+    radial-gradient(circle at 32px 14px, #ffbd2e 5px, transparent 6px),
+    radial-gradient(circle at 50px 14px, #27c93f 5px, transparent 6px),
+    linear-gradient(180deg, #21262d, #1a1f27);
+  border-bottom: 1px solid var(--border);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 .markdown-body pre {
-  background-color: var(--bg-alt);
-  border: 1px solid var(--border);
+  padding-top: 40px;
 }
+
+/* Dentro de <pre> el <code> va sin fondo ni borde */
 .markdown-body pre code,
-.markdown-body pre tt { background-color: transparent; }
-.markdown-body kbd {
-  color: var(--text);
-  background-color: var(--bg-alt);
-  border: solid 1px var(--border);
-  border-bottom-color: #484f58;
-  box-shadow: inset 0 -1px 0 #484f58;
+.markdown-body pre tt {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  line-height: inherit;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+  color: #c9d1d9;
 }
-.markdown-body .csv-data th { background: var(--bg-alt); border-top: 0; }
-.markdown-body .csv-data .blob-num { background: var(--bg); }
 
-/* Placeholder inputs */
-::placeholder { color: var(--text-muted); opacity: 1; }
+/* Contenedor de Rouge / highlighter */
+.markdown-body .highlight {
+  margin-bottom: 20px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  box-shadow: none;
+  border-radius: var(--radius-md);
+}
 
-/* Selección de texto */
-::selection { background-color: #1f6feb; color: #fff; }
+/* ============================================================
+   TABLAS
+   ============================================================ */
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  margin: 0 0 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  text-align: left;
+}
+.markdown-body table th:last-child,
+.markdown-body table td:last-child {
+  border-right: none;
+}
+.markdown-body table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-body table thead th {
+  font-weight: 700;
+  color: var(--text-strong);
+  background: linear-gradient(180deg, #21262d, #1a1f27);
+  font-size: 0.92em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.markdown-body table tbody tr {
+  background-color: var(--bg-elev);
+  transition: background-color 0.15s ease;
+}
+.markdown-body table tbody tr:nth-child(2n) {
+  background-color: var(--bg-elev-2);
+}
+.markdown-body table tbody tr:hover {
+  background-color: rgba(88, 166, 255, 0.08);
+}
+
+/* Código dentro de tabla */
+.markdown-body table code {
+  font-size: 0.85em;
+  background: rgba(110, 118, 129, 0.3);
+  color: #79c0ff;
+}
+
+/* ============================================================
+   IMÁGENES
+   ============================================================ */
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* ============================================================
+   KBD (teclas)
+   ============================================================ */
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 7px;
+  font-size: 11px;
+  line-height: 12px;
+  color: var(--text-strong);
+  vertical-align: middle;
+  background-color: var(--bg-elev-2);
+  border: 1px solid var(--border);
+  border-bottom-color: #484f58;
+  border-radius: var(--radius-sm);
+  box-shadow: inset 0 -1px 0 #484f58, 0 1px 2px rgba(0,0,0,0.3);
+}
+
+/* ============================================================
+   RESALTADO DE SINTAXIS (Rouge / highlight.js)
+   ============================================================ */
+.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
+  color: #8b949e;
+  font-style: italic;
+}
+.highlight .cp { color: #8b949e; font-weight: bold; }
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kr,
+.highlight .kt, .highlight .kp, .highlight .kc, .highlight .kv {
+  color: #ff7b72; font-weight: 600;
+}
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb,
+.highlight .sc, .highlight .sd, .highlight .se, .highlight .sh,
+.highlight .si, .highlight .sx, .highlight .sr, .highlight .ss {
+  color: #a5d6ff;
+}
+.highlight .m, .highlight .mi, .highlight .mf, .highlight .mh,
+.highlight .mo, .highlight .il, .highlight .mb, .highlight .mx {
+  color: #79c0ff;
+}
+.highlight .na, .highlight .nb, .highlight .nc, .highlight .no,
+.highlight .nd, .highlight .ni, .highlight .ne, .highlight .nf,
+.highlight .nl, .highlight .nn, .highlight .nt, .highlight .nv {
+  color: #d2a8ff;
+}
+.highlight .nf { color: #d2a8ff; font-weight: 600; }
+.highlight .o, .highlight .ow { color: #ff7b72; }
+.highlight .p  { color: #c9d1d9; }
+.highlight .err { color: #f85149; background: transparent; }
+.highlight .gd { color: #ffdcd7; background: #67060c; }
+.highlight .gi { color: #aff5b4; background: #033a16; }
+
+/* ============================================================
+   ANCHOR (anchor.js)
+   ============================================================ */
+.anchor {
+  float: left;
+  padding-right: 6px;
+  margin-left: -22px;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  opacity: 1;
+}
+.anchor svg {
+  fill: var(--link);
+  vertical-align: middle;
+}
+
+/* ============================================================
+   FOOTER / EXTRA
+   ============================================================ */
+.markdown-body hr + p,
+.markdown-body > p:last-of-type {
+  color: var(--text-muted);
+  font-size: 0.9em;
+}
+
+/* Animación suave de entrada */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.container-lg > .markdown-body {
+  animation: fadeInUp 0.4s ease-out;
+}
+
+/* Responsive: tablas con scroll horizontal */
+@media (max-width: 768px) {
+  .markdown-body table {
+    font-size: 0.9em;
+  }
+  .markdown-body table th,
+  .markdown-body table td {
+    padding: 8px 10px;
+  }
+  .markdown-body h1 { font-size: 1.6em; }
+  .markdown-body h2 { font-size: 1.3em; }
+  .markdown-body h3 { font-size: 1.1em; }
+}
