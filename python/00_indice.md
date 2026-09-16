@@ -2,28 +2,7 @@
 
 **Versión de referencia:** Python 3.12 · Actualizado: 2026
 
-Este manual enseña Python y su ecosistema de librerías y frameworks de forma estructurada. Cada tema se entrega en **un archivo Markdown independiente y autocontenido**, con teoría, ejemplos funcionales, explicaciones paso a paso y ejercicios prácticos.
-
-> Todos los ejemplos de código viven dentro de este manual como bloques resaltados. No se requieren archivos `.py` externos para seguirlo.
-
----
-
-## Cómo usar este manual
-
-1. **Sigue el orden** si eres nuevo en Python: Parte I → VI.
-2. Si ya programas en Python, salta directo a la Parte o tema que necesites (cada archivo es autocontenido).
-3. En cada concepto encontrarás: teoría → ejemplo comentado → salida esperada → errores comunes → ejercicio propuesto.
-4. Al final de cada archivo hay ejemplos integradores, buenas prácticas y recursos.
-
-**Convenciones:**
-- Bloques `python` para código ejecutable.
-- Bloques `text` para la salida esperada.
-- 🧪 marca un ejercicio propuesto (con pista, sin solución completa).
-- 🔥 marca un error común o trampa.
-
----
-
-## PARTE I — Fundamentos de Python
+Fundamentos de Python
 
 | # | Archivo | Contenido |
 |---|---------|-----------|
@@ -77,32 +56,3 @@ Este manual enseña Python y su ecosistema de librerías y frameworks de forma e
 | 23 | [23_buenas_practicas.md](23_buenas_practicas.md) | Estructura de proyectos, Clean Architecture, patrones GoF, SOLID, TDD, CI/CD, Docker, Sphinx |
 | 24 | [24_apendices.md](24_apendices.md) | Comparativas, cheat sheets, recursos, glosario, ejercicios y soluciones |
 
----
-
-## Estado del manual
-
-- [x] `00_indice.md`
-- [x] `01_introduccion_python.md`
-- [x] `02_sintaxis_tipos_datos.md`
-- [x] `03_control_flujo.md`
-- [x] `04_funciones.md`
-- [x] `05_poo.md`
-- [x] `06_errores_excepciones.md`
-- [x] `07_modulos_paquetes.md`
-- [x] `08_python_avanzado.md`
-- [x] `09_flask.md`
-- [x] `10_flask_sqlalchemy.md`
-- [x] `11_django_orm.md`
-- [x] `12_fastapi_orm.md`
-- [x] `13_pyramid.md`
-- [x] `14_sqlalchemy.md`
-- [x] `15_selenium.md`
-- [x] `16_tkinter.md`
-- [x] `17_pyside6.md`
-- [x] `18_numpy.md`
-- [x] `19_pandas.md`
-- [x] `20_scikit_learn.md`
-- [x] `21_opencv.md`
-- [x] `22_integracion.md`
-- [x] `23_buenas_practicas.md`
-- [x] `24_apendices.md`
