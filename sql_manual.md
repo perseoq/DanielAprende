@@ -31,6 +31,7 @@ CREATE USER 'nombre_usuario'@'localhost' IDENTIFIED BY 'tu_contraseña';
 Puedes conceder privilegios específicos sobre una base de datos utilizando el comando `GRANT`.
 
 * **Dar todos los privilegios sobre una base de datos específica:**
+  
 ```sql
 GRANT ALL PRIVILEGES ON nombre_base_de_datos.* TO 'nombre_usuario'@'localhost';
 
@@ -38,6 +39,7 @@ GRANT ALL PRIVILEGES ON nombre_base_de_datos.* TO 'nombre_usuario'@'localhost';
 
 
 * **Dar permisos específicos (ej. solo lectura y escritura: `SELECT`, `INSERT`, `UPDATE`):**
+  
 ```sql
 GRANT SELECT, INSERT, UPDATE ON nombre_base_de_datos.* TO 'nombre_usuario'@'localhost';
 
