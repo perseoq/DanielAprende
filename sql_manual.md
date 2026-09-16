@@ -47,6 +47,7 @@ GRANT SELECT, INSERT, UPDATE ON nombre_base_de_datos.* TO 'nombre_usuario'@'loca
 
 
 * **Dar privilegios globales (sobre todo el servidor, úsalo con precaución):**
+
 ```sql
 GRANT ALL PRIVILEGES ON *.* TO 'nombre_usuario'@'localhost';
 
