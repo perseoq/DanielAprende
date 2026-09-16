@@ -22,4 +22,4 @@ Si encuentras errores o quieres añadir contenido, siéntete libre de abrir un *
 
 ## 📄 Licencia
 
-Este material se comparte con fines educativos. Revisa cada archivo para más detalles sobre su licencia particular.
+Este material se comparte con fines educativos. Revisa cada archivo para más detalles sobre su licencia particular. 
