@@ -116,7 +116,7 @@ Los enteros se dividen según su capacidad y si aceptan o no números negativos 
 
 Podemos consultar los límites exactos directamente desde nuestro código utilizando las macros provistas por `<limits.h>`:
 
-```
+```c
 #include <stdio.h>
 #include <limits.h> // Contiene las constantes de límites enteros
 
