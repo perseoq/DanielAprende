@@ -1,3 +1,5 @@
+{% raw %}
+
 # 23 · Buenas Prácticas y Patrones
 
 **Versión recomendada:** Python 3.12
@@ -876,3 +878,5 @@ warn_unused_ignores = true
 3. **Reto 3:** Dockeriza el proyecto y publica la documentación con MkDocs.
 
 **Anterior:** [22_integracion.md](22_integracion.md) · **Siguiente:** [24_apendices.md](24_apendices.md)
+
+{% endraw %}

@@ -1,3 +1,5 @@
+{% raw %}
+
 # 09 · Flask
 
 **Versión recomendada:** Flask 3.0 · Python 3.12
@@ -1541,3 +1543,5 @@ Para APIs grandes, considera extensiones que aportan validación, serialización
 3. **Reto 3:** Documenta la API con `flask-smorest` y OpenAPI.
 
 **Anterior:** [08_python_avanzado.md](08_python_avanzado.md) · **Siguiente:** [10_flask_sqlalchemy.md](10_flask_sqlalchemy.md)
+
+{% endraw %}

@@ -1,3 +1,5 @@
+{% raw %}
+
 # 11 · Django y su ORM
 
 **Versión recomendada:** Django 5.0 · Python 3.12
@@ -1876,3 +1878,5 @@ server {
 3. **Reto 3:** Añade un chat en tiempo real con Channels.
 
 **Anterior:** [10_flask_sqlalchemy.md](10_flask_sqlalchemy.md) · **Siguiente:** [12_fastapi_orm.md](12_fastapi_orm.md)
+
+{% endraw %}

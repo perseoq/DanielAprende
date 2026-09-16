@@ -1,3 +1,5 @@
+{% raw %}
+
 # 13 · Pyramid
 
 **Versión recomendada:** Pyramid 2.0 · Python 3.12
@@ -1059,3 +1061,5 @@ server {
 3. **Reto 3:** Añade autenticación por sesión y una página protegida.
 
 **Anterior:** [12_fastapi_orm.md](12_fastapi_orm.md) · **Siguiente (Parte III):** [14_sqlalchemy.md](14_sqlalchemy.md)
+
+{% endraw %}
