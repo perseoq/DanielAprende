@@ -1,1 +1,2 @@
 - [Lenguaje C](./C_Aprender.md)
+- [Punteros y memoria en C](./punteros_c.md)
